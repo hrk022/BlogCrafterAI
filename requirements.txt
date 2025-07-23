@@ -1,0 +1,8 @@
+torch
+streamlit
+python-dotenv
+tavily
+requests
+langchain
+langchain-community
+faiss-cpu
