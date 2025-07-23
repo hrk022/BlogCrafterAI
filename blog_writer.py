@@ -3,7 +3,6 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import torch
 import streamlit as st
 from dotenv import load_dotenv
-from tavily import TavilyClient
 import requests
 
 from langchain.text_splitter import CharacterTextSplitter
@@ -13,15 +12,16 @@ from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain.callbacks.base import BaseCallbackHandler
+from langchain_community.utilities.tavily_search import TavilySearchAPIWrapper
 
 # ───────────────────────────────
 # ✅ Load Environment Variables
 # ───────────────────────────────
-load_dotenv(dotenv_path="open_ai.env")
-api_key = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_API_KEY"] = api_key if api_key else ""
-os.environ["OPENAI_API_BASE"] = "https://api.groq.com/openai/v1"
+load_dotenv()
 
+
+api_key = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_BASE"] = "https://api.groq.com/openai/v1"
 unsplash_access_key = os.getenv("UNSPLASH_ACCESS_KEY")
 tavily_api_key = os.getenv("TAVILY_API_KEY")
 
@@ -52,15 +52,15 @@ if "qa_chain" not in st.session_state:
     st.session_state.qa_chain = None
 
 # ───────────────────────────────
-# ✅ Web Scraper for Query Topic using Tavily SDK
+# ✅ Web Scraper for Query Topic using LangChain Tavily Wrapper
 # ───────────────────────────────
 def web_scrape(query):
     try:
-        client = TavilyClient(api_key=tavily_api_key)
-        results = client.search(query=query, search_depth="advanced", max_results=3)
+        search = TavilySearchAPIWrapper(tavily_api_key=tavily_api_key)
+        results = search.results(query=query, max_results=3)
 
         full_text = ""
-        for result in results.get("results", []):
+        for result in results:
             content = result.get("content", "") or result.get("body", "")
             full_text += content + "\n\n"
 
