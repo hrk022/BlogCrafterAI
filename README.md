@@ -1,54 +1,61 @@
 # ✨ BlogCrafterAI — Your Intelligent Blog Writing Assistant 📝🤖
 
-![GitHub Repo stars](https://img.shields.io/github/stars/hrk02/BlogCrafterAI?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/hrk02/BlogCrafterAI?style=flat-square)
-![Issues](https://img.shields.io/github/issues/hrk02/BlogCrafterAI?style=flat-square)
-![License](https://img.shields.io/github/license/hrk02/BlogCrafterAI?style=flat-square)
-
-> 🚀 AI-powered tool that transforms your topic into a polished blog post — complete with researched content, structured sections, and engaging language.
+[![Streamlit App](https://img.shields.io/badge/Live_App-Streamlit-orange?logo=streamlit&style=for-the-badge)](https://blogcrafterai-uaxvtnbqqy4d943xexkfrp.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&style=for-the-badge)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#license)
 
 ---
 
-## 🌐 Live Demo
+🚀 **BlogCrafterAI** helps you generate high-quality, SEO-friendly blogs using state-of-the-art language models and a sleek, Streamlit-based interface.
 
-🎯 Click below to try BlogCrafterAI now!
+## 🌟 Features
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blogcrafterai-uaxvtnbqqy4d943xexkfrp.streamlit.app/)
-
----
-
-## 📸 Screenshot
-
-![App Screenshot](https://github.com/yourusername/BlogCrafterAI/assets/your_screenshot.png)
-
----
-
-## ✨ Features
-
-- 🔍 Topic Understanding using `LangChain`
-- 🧠 Uses `ChatGPT` via `langchain-openai`
-- 🌐 Web Search with `Tavily`
-- 🧱 Vector Storage with `FAISS`
-- ✍️ Full-length Blog Generation with SEO structure
-- 🎯 Interactive UI with Streamlit
+- 🧠 AI-powered blog generation using OpenAI
+- 📄 Upload PDFs to summarize and blog from
+- 🔎 Semantic search with FAISS vector database
+- 🛠️ Dynamic prompt tuning for custom creativity
+- 💬 Chat-style assistant to guide your content
+- 🎨 Modern and responsive UI built on Streamlit
 
 ---
 
-## 🛠️ Built With
+## 📸 Demo
 
-- [Streamlit](https://streamlit.io/)
-- [LangChain](https://www.langchain.com/)
-- [OpenAI API](https://platform.openai.com/)
-- [FAISS](https://github.com/facebookresearch/faiss)
-- [Tavily](https://tavily.com/)
-- `sentence-transformers`, `torch`, `dotenv`, and more
+> 🔗 [Live Demo](https://blogcrafterai-uaxvtnbqqy4d943xexkfrp.streamlit.app/)  
+> Generate blogs from ideas, topics, or documents in seconds!
 
 ---
 
-## ⚙️ Installation
+## 🧩 Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| 🐍 Python | Core logic & scripting |
+| 🧠 LangChain | Language model orchestration |
+| 🏗️ FAISS | Vector storage for semantic retrieval |
+| 📜 OpenAI | LLM-based generation |
+| 🧬 Tavily | Web search integration |
+| 🌐 Streamlit | Frontend and deployment |
+| 🔐 dotenv | API key management |
+
+---
+
+## ⚙️ Setup
 
 ```bash
-git clone https://github.com/yourusername/BlogCrafterAI.git
+git clone https://github.com/your-username/BlogCrafterAI.git
 cd BlogCrafterAI
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Set your environment variables
+touch .env
+# Add your keys like:
+# OPENAI_API_KEY=your_openai_key
+# TAVILY_API_KEY=your_tavily_key
+
+# Run the app
+streamlit run blog_writer.py
+
 
