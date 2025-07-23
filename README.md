@@ -43,7 +43,7 @@
 ## ⚙️ Setup
 
 ```bash
-git clone https://github.com/your-username/BlogCrafterAI.git
+git clone https://github.com/hrk02/BlogCrafterAI.git
 cd BlogCrafterAI
 
 # Install dependencies
