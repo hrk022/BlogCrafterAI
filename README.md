@@ -1,9 +1,9 @@
 # ✨ BlogCrafterAI — Your Intelligent Blog Writing Assistant 📝🤖
 
-![GitHub Repo stars](https://img.shields.io/github/stars/yourusername/BlogCrafterAI?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/BlogCrafterAI?style=flat-square)
-![Issues](https://img.shields.io/github/issues/yourusername/BlogCrafterAI?style=flat-square)
-![License](https://img.shields.io/github/license/yourusername/BlogCrafterAI?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/hrk02/BlogCrafterAI?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/hrk02/BlogCrafterAI?style=flat-square)
+![Issues](https://img.shields.io/github/issues/hrk02/BlogCrafterAI?style=flat-square)
+![License](https://img.shields.io/github/license/hrk02/BlogCrafterAI?style=flat-square)
 
 > 🚀 AI-powered tool that transforms your topic into a polished blog post — complete with researched content, structured sections, and engaging language.
 
@@ -51,3 +51,4 @@
 git clone https://github.com/yourusername/BlogCrafterAI.git
 cd BlogCrafterAI
 pip install -r requirements.txt
+
